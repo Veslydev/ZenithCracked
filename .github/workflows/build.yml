@@ -2,10 +2,12 @@
 name: ZenithProxy Build
 
 on:
-  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
   push:
     branches:
-      - "1.21.0"
+      - 1.21.0
 
 jobs:
   build:
