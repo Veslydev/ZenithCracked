@@ -2,7 +2,11 @@ name: Build Launcher
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: "0 0 * * 1"
+  push:
+    branches:
+      - 1.21.0
 env:
   python_version: '3.12'
 
