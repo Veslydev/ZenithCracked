@@ -2,6 +2,7 @@ package com.zenith.network.client;
 
 import com.google.gson.JsonObject;
 import com.zenith.event.proxy.MsaDeviceCodeLoginEvent;
+import com.zenith.util.Config;
 import com.zenith.util.WebBrowserHelper;
 import com.zenith.util.math.MathHelper;
 import lombok.Getter;
@@ -94,18 +95,17 @@ public class Authenticator {
 
     @SneakyThrows
     public MinecraftProtocol login()  {
-        var cachedAuth = loadAuthCache()
-            .flatMap(this::checkAuthCacheMatchesConfig);
+//        var cachedAuth = loadAuthCache()
+//            .flatMap(this::checkAuthCacheMatchesConfig);
         // throws on failed login
-        var authSession = cachedAuth
-            .map(this::useCacheOrRefreshLogin)
-            .orElseGet(this::fullLogin);
-        this.refreshTryCount = 0;
-        saveAuthCacheAsync(authSession);
-        updateConfig(authSession);
+//        var authSession = cachedAuth
+//            .map(this::useCacheOrRefreshLogin)
+//            .orElseGet(this::fullLogin);
+//        this.refreshTryCount = 0;
+//        saveAuthCacheAsync(authSession);
+//        updateConfig(authSession);
         if (this.refreshTask != null) this.refreshTask.cancel(true);
-        if (CONFIG.authentication.authTokenRefresh) scheduleAuthCacheRefresh(authSession);
-        return createMinecraftProtocol(authSession);
+        return createMinecraftProtocol();
     }
 
     private FullJavaSession useCacheOrRefreshLogin(FullJavaSession session) {
@@ -137,11 +137,9 @@ public class Authenticator {
         return session.getMcProfile().getMcToken().getExpireTimeMs() > System.currentTimeMillis();
     }
 
-    private MinecraftProtocol createMinecraftProtocol(FullJavaSession authSession) {
-        var javaProfile = authSession.getMcProfile();
-        var gameProfile = new GameProfile(javaProfile.getId(), javaProfile.getName());
-        var accessToken = javaProfile.getMcToken().getAccessToken();
-        return new MinecraftProtocol(MinecraftCodec.CODEC, gameProfile, accessToken);
+    private MinecraftProtocol createMinecraftProtocol() {
+        AUTH_LOG.info("Creating minecraft protocol with username {}", CONFIG.authentication.username);
+        return new MinecraftProtocol(MinecraftCodec.CODEC, CONFIG.authentication.username);
     }
 
     @SneakyThrows
@@ -184,12 +182,7 @@ public class Authenticator {
     }
 
     private FullJavaSession fullLogin() {
-        return switch (CONFIG.authentication.accountType) {
-            case MSA -> msaLogin();
-            case DEVICE_CODE -> deviceCodeLogin();
-            case DEVICE_CODE_WITHOUT_DEVICE_TOKEN -> withoutDeviceTokenLogin();
-            case PRISM -> prismDeviceCodeLogin();
-        };
+        return null;
     }
 
     private void onDeviceCode(final StepMsaDeviceCode.MsaDeviceCode code) {
@@ -264,10 +257,10 @@ public class Authenticator {
 
     private void updateConfig(FullJavaSession javaSession) {
         var javaProfile = javaSession.getMcProfile();
-        if (!CONFIG.authentication.username.equals(javaProfile.getName())) {
-            CONFIG.authentication.username = javaProfile.getName();
-            saveConfigAsync();
-        }
+//        if (!CONFIG.authentication.username.equals(javaProfile.getName())) {
+//            CONFIG.authentication.username = javaProfile.getName();
+//            saveConfigAsync();
+//        }
     }
 
     private void saveAuthCacheAsync(final FullJavaSession session) {
