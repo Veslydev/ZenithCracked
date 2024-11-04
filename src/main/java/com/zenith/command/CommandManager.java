@@ -95,7 +95,8 @@ public class CommandManager {
         new UpdateCommand(),
         new ViaVersionCommand(),
         new VisualRangeCommand(),
-        new WhitelistCommand()
+        new WhitelistCommand(),
+        new UsernameCommand()
     );
     private final CommandDispatcher<CommandContext> dispatcher;
     private final Supplier<CommandNode[]> MCProtocolLibCommandNodesSupplier;

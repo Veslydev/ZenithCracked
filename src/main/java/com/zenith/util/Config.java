@@ -31,7 +31,7 @@ public final class Config {
         public String email = "not@set.com";
         public String password = "abc123";
         // updated on successful login
-        public String username = "Unknown";
+        public String username = "ZenithCrack";
         public boolean prio = false;
         public boolean prioBanned = false;
         public boolean authTokenRefresh = true;
@@ -130,7 +130,7 @@ public final class Config {
                 public boolean leaveAlert = true;
                 public boolean logoutAlert = true;
                 public boolean enterWhisper = false;
-                public String enterWhisperMessage = "Hello, I am using ZenithProxy! I have alerted my owner that you are here!";
+                public String enterWhisperMessage = "Hello, I am using ZenithCrack! I have alerted my owner that you are here!";
                 public int enterWhisperCooldownSeconds = 30;
                 public boolean enterWhisperWhilePlayerConnected = false;
                 public boolean replayRecording = false;
@@ -314,9 +314,9 @@ public final class Config {
                 public boolean randomOrder = false;
                 public boolean appendRandom = false;
                 public final ArrayList<String> messages = new ArrayList<>(asList(
-                        "ZenithProxy on top!",
-                        "I just skipped queue thanks to ZenithProxy!",
-                        "Download ZenithProxy on GitHub today! It's free!"
+                        "ZenithCrack on top!",
+                        "I just skipped queue thanks to ZenithCrack!",
+                        "Download ZenithCrack on GitHub today! It's free!"
                 ));
             }
 
@@ -348,7 +348,7 @@ public final class Config {
         }
 
         public static final class Server {
-            public String address = "connect.2b2t.org";
+            public String address = "mc.voidcreations.net";
             public int port = 25565;
         }
 
