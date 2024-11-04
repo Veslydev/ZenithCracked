@@ -6,7 +6,7 @@ on:
     - cron: "0 0 * * 1"
   push:
     branches:
-      - master
+      - 1.21.0
 
 jobs:
   build-java-and-linux-amd64:
@@ -87,6 +87,11 @@ jobs:
           echo "JAVA_TAG=$j_tag" >> "$GITHUB_ENV"
           l_tag="$(sed 's/\+/\+linux./' <<< ${{ github.ref_name }})"
           echo "LINUX_TAG=$l_tag" >> "$GITHUB_ENV"
+
+      - name: Debug Release Tags
+        run: |
+          echo "JAVA_TAG=${{ env.JAVA_TAG }}"
+          echo "LINUX_TAG=${{ env.LINUX_TAG }}"
 
       - name: Publish Java Artifact
         uses: ncipollo/release-action@v1
