@@ -99,8 +99,4 @@ jobs:
           tag: ${{ env.LINUX_TAG }}
           artifacts: "artifacts/ZenithProxy.zip"
           prerelease: true
-<<<<<<< HEAD
           body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"
-=======
-          body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"
->>>>>>> c8820b69 (God please help me)
