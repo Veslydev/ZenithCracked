@@ -15,6 +15,6 @@ public class LaunchConfig {
     }
     public String version = "0.0.0";
     public String local_version = "0.0.0";
-    public String repo_owner = "rfresh2";
-    public String repo_name = "ZenithProxy";
+    public String repo_owner = "Veslydev";
+    public String repo_name = "ZenithCracked";
 }

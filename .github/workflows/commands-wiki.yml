@@ -6,7 +6,7 @@ on:
     - cron: "0 0 * * 1"
   push:
     branches:
-      - 1.21.0
+      - master
 
 jobs:
   generate:

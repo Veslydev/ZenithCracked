@@ -407,7 +407,7 @@ public final class Config {
         public final Extra extra = new Extra();
         public final Ping ping = new Ping();
         public final ServerViaVersion viaversion = new ServerViaVersion();
-        public boolean verifyUsers = true;
+        public boolean verifyUsers = false;
         public boolean acceptTransfers = true;
         public boolean onlyZenithTransfers = true;
         public String proxyIP = "localhost";
@@ -458,7 +458,7 @@ public final class Config {
             }
 
             public static final class Whitelist {
-                public boolean enable = true;
+                public boolean enable = false;
                 public final ArrayList<PlayerEntry> whitelist = new ArrayList<>();
                 public String kickmsg = "no whitelist?";
                 // Automatically adds the proxy client account to the whitelist if not present
@@ -560,9 +560,9 @@ public final class Config {
         public boolean mentionRoleOnPrioUpdate = true;
         public boolean mentionRoleOnPrioBanUpdate = true;
         public boolean mentionRoleOnDeviceCodeAuth = true;
-        public boolean manageProfileImage = true;
-        public boolean manageNickname = true;
-        public boolean manageDescription = true;
+        public boolean manageProfileImage = false;
+        public boolean manageNickname = false;
+        public boolean manageDescription = false;
         public boolean showNonWhitelistLoginIP = true;
         public boolean isUpdating = false; // internal use for update command state persistence
         public final QueueWarning queueWarning = new QueueWarning();

@@ -49,8 +49,8 @@ def setup_execute(config):
     config.release_channel = release_channel + "." + minecraft_version
     config.version = "0.0.0"
     config.local_version = "0.0.0"
-    config.repo_owner = "rfresh2"
-    config.repo_name = "ZenithProxy"
+    config.repo_owner = "Veslydev"
+    config.repo_name = "ZenithCracked"
     config.write_launch_config()
     print("launch_config.json written successfully!")
 
@@ -122,7 +122,7 @@ def setup_execute(config):
 
     if discord_bot:
         print("See README.md for Discord bot setup instructions")
-        print("https://github.com/rfresh2/ZenithProxy/?tab=readme-ov-file#discord-bot-setup")
+        print("https://github.com/Veslydev/ZenithCracked/?tab=readme-ov-file#discord-bot-setup")
         discord_verify_verbose = False
         while True:
             print("Enter Discord bot token:")
@@ -238,7 +238,7 @@ def rescue_invalid_system(config):
 def verify_discord_bot_token(token, verbose=False):
     headers = {
         "Authorization": "Bot " + token,
-        "User-Agent": "DiscordBot (https://github.com/rfresh2/ZenithProxy, 1.0)"
+        "User-Agent": "DiscordBot (https://github.com/Veslydev/ZenithCracked, 1.0)"
     }
     try:
         response = requests.get("https://discord.com/api/applications/@me", headers=headers, timeout=10)

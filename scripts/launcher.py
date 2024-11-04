@@ -14,7 +14,7 @@ import zipfile
 
 print("################################################")
 print("WARNING: This launcher version is deprecated and may no longer work in the future.")
-print("Please update to Launcher V3: https://github.com/rfresh2/ZenithProxy/releases/tags/launcher-v3")
+print("Please update to Launcher V3: https://github.com/Veslydev/ZenithCracked/releases/tags/launcher-v3")
 print("################################################")
 
 auto_update = True
@@ -22,8 +22,8 @@ auto_update_launcher = True
 release_channel = "java.1.20.1"
 version = "0.0.0"
 local_version = "0.0.0"
-repo_owner = "rfresh2"
-repo_name = "ZenithProxy"
+repo_owner = "Veslydev"
+repo_name = "ZenithCracked"
 launch_dir = "launcher/"
 custom_jvm_args = None
 system = platform.system()
@@ -159,7 +159,7 @@ def valid_release_channel(channel):
 
 
 def get_github_api_base_url():
-    if repo_owner == "rfresh2" and repo_name == "ZenithProxy":
+    if repo_owner == "Veslydev" and repo_name == "ZenithCracked":
         return "github.2b2t.vc"
     else:
         return "api.github.com"

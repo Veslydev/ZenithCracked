@@ -8,7 +8,7 @@ class GitHubAPI:
         self.launch_config = launch_config
 
     def get_base_url(self):
-        if self.launch_config.repo_owner == "rfresh2" and self.launch_config.repo_name == "ZenithProxy":
+        if self.launch_config.repo_owner == "Veslydev" and self.launch_config.repo_name == "ZenithCracked":
             host = "github.2b2t.vc"
         else:
             host = "api.github.com"

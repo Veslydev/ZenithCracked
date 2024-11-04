@@ -6,11 +6,6 @@ name: ACT-Local GraalVM Native
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - 1.21.0
 
 jobs:
   build:

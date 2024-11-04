@@ -191,7 +191,7 @@ public class DiscordBot {
                 .block(Duration.ofSeconds(20));
         } catch (final CloseException e) {
             if (e.getReason().map(r -> r.contains("Disallowed intent")).orElse(false)) {
-                DISCORD_LOG.error("Enable Message Content intent on the Discord developer's website. For help see: https://github.com/rfresh2/ZenithProxy/?tab=readme-ov-file#discord-bot-setup");
+                DISCORD_LOG.error("Enable Message Content intent on the Discord developer's website. For help see: https://github.com/Veslydev/ZenithCracked/?tab=readme-ov-file#discord-bot-setup");
             } else {
                 DISCORD_LOG.error("Failed logging into discord: {}", e.getReason().orElse(e.getMessage()));
             }

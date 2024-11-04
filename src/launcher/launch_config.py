@@ -32,8 +32,8 @@ class LaunchConfig:
     release_channel = "java.1.21.0"
     version = "0.0.0"
     local_version = "0.0.0"
-    repo_owner = "rfresh2"
-    repo_name = "ZenithProxy"
+    repo_owner = "Veslydev"
+    repo_name = "ZenithCracked"
     custom_jvm_args = None
     launch_dir = "launcher/"
 

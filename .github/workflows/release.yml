@@ -6,7 +6,7 @@ on:
     - cron: "0 0 * * 1"
   push:
     branches:
-      - 1.21.0
+      - master
 
 jobs:
   build-java-and-linux-amd64:
@@ -94,7 +94,7 @@ jobs:
           tag: ${{ env.JAVA_TAG }}
           artifacts: "artifacts/*.jar"
           prerelease: true
-          body: "File upload not for users. **Use the Launcher:** https://github.com/rfresh2/ZenithProxy/releases/tag/launcher-v3"
+          body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"
 
       - name: Publish Linux Artifact
         uses: ncipollo/release-action@v1
@@ -102,4 +102,4 @@ jobs:
           tag: ${{ env.LINUX_TAG }}
           artifacts: "artifacts/ZenithProxy.zip"
           prerelease: true
-          body: "File upload not for users. **Use the Launcher:** https://github.com/rfresh2/ZenithProxy/releases/tag/launcher-v3"
+          body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"

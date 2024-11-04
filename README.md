@@ -12,14 +12,14 @@
   <img src="https://img.shields.io/badge/MC-1.20.4-yellow.svg" alt="Minecraft"/>
   <img src="https://img.shields.io/badge/MC-1.20.1-yellow.svg" alt="Minecraft"/>
   <img src="https://img.shields.io/badge/MC-1.12.2-yellow.svg" alt="Minecraft"/>
-  <img src="https://img.shields.io/github/languages/code-size/rfresh2/ZenithProxy.svg" alt="Code size"/>
-  <img src="https://img.shields.io/github/repo-size/rfresh2/ZenithProxy.svg" alt="GitHub repo size"/>
-  <img alt="Downloads" src="https://img.shields.io/github/downloads/rfresh2/ZenithProxy/total">
-  <img src="https://tokei.rs/b1/github/rfresh2/ZenithProxy?category=code&style=flat" alt="Lines of Code"/>
+  <img src="https://img.shields.io/github/languages/code-size/Veslydev/ZenithCracked.svg" alt="Code size"/>
+  <img src="https://img.shields.io/github/repo-size/Veslydev/ZenithCracked.svg" alt="GitHub repo size"/>
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/Veslydev/ZenithCracked/total">
+  <img src="https://tokei.rs/b1/github/Veslydev/ZenithCracked?category=code&style=flat" alt="Lines of Code"/>
 </p>
 
 
-Minecraft proxy/bot intended for use on 2b2t.org. 
+Minecraft proxy/bot intended for use on 2b2t.org. - Now in offline minecraft
 
 Unlike a traditional MC bot, you can login to it as a normal MC server and control the account.
 
@@ -90,13 +90,13 @@ This project is also used to support the [2b2t.vc API](https://api.2b2t.vc) and 
 
 1. Linux, Windows, or Mac computer. I recommend using a VPS (droplet) from DigitalOcean:
     * [$200 Free Digital](https://m.do.co/c/f3afffef9a46)[Ocean Credits](https://m.do.co/c/3a3a226e4936).
-    * [Guide and automatic setup script](https://github.com/rfresh2/ZenithProxy/wiki/DigitalOcean-Setup-Guide).
+    * [Guide and automatic setup script](https://github.com/Veslydev/ZenithCracked/wiki/DigitalOcean-Setup-Guide).
 2. Java 21+ (Not required for `linux` release channel on supported CPU)
     * The ZenithProxy launcher will install Java 21 automatically if not already installed
 
 ### Launcher
 
-1. Download [the launcher zip](https://github.com/rfresh2/ZenithProxy/releases/launcher-v3) for your system
+1. Download [the launcher zip](https://github.com/Veslydev/ZenithCracked/releases/launcher-v3) for your system
     * For other systems, download the Python version (Universal). Requires [Python 3.10+](https://www.python.org/downloads/)
 2. Unzip the file.
 3. Double click or run the launcher executable in a terminal:
@@ -108,7 +108,7 @@ This project is also used to support the [2b2t.vc API](https://api.2b2t.vc) and 
     <summary>How do I download a file from a Linux terminal?</summary>
 
 * Use [wget](https://linuxize.com/post/wget-command-examples/#how-to-download-a-file-with-wget) in the terminal
-* Example: `wget https://github.com/rfresh2/ZenithProxy/releases/download/launcher-v3/ZenithProxy-launcher-linux-amd64.zip`
+* Example: `wget https://github.com/Veslydev/ZenithCracked/releases/download/launcher-v3/ZenithProxy-launcher-linux-amd64.zip`
 </details>
 
 <details> 
@@ -135,11 +135,11 @@ This project is also used to support the [2b2t.vc API](https://api.2b2t.vc) and 
     * Discord: `.` (e.g. `.help`)
     * In-game: `/` OR `!` -> (e.g. `/help`)
     * Terminal: N/A -> (e.g. `help`)
-* [Full Commands Documentation](https://github.com/rfresh2/ZenithProxy/wiki/Commands)
+* [Full Commands Documentation](https://github.com/Veslydev/ZenithCracked/wiki/Commands)
 
 ### Running on Linux Servers
 
-See the [Linux Guide](https://github.com/rfresh2/ZenithProxy/wiki/Linux-Guide)
+See the [Linux Guide](https://github.com/Veslydev/ZenithCracked/wiki/Linux-Guide)
 
 I highly recommend using a terminal multiplexer - a program that manages terminal sessions. 
 
@@ -177,7 +177,7 @@ Create a new folder for each instance with its own copy of the launcher files. [
 
 Instances must be independently run and configured. i.e. separate terminal sessions, discord bots, ports, config files, etc.
 
-See the [Linux Guide](https://github.com/rfresh2/ZenithProxy/wiki/Linux-Guide) for help copying files, creating folders, etc.
+See the [Linux Guide](https://github.com/Veslydev/ZenithCracked/wiki/Linux-Guide) for help copying files, creating folders, etc.
 
 ### 2b2t Limits
 

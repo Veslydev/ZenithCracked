@@ -138,7 +138,7 @@ public class Proxy {
             DEFAULT_LOG.warn("launch_config.json version: {} and embedded ZenithProxy version: {} do not match!", LAUNCH_CONFIG.version, exeReleaseVersion);
             if (LAUNCH_CONFIG.auto_update)
                 DEFAULT_LOG.warn("AutoUpdater is enabled but will break!");
-            DEFAULT_LOG.warn("Use the official launcher: https://github.com/rfresh2/ZenithProxy/releases/tag/launcher-v3");
+            DEFAULT_LOG.warn("Use the official launcher: https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3");
         }
         initEventHandlers();
         try {
@@ -203,7 +203,7 @@ public class Proxy {
                 DEFAULT_LOG.warn("Switch to a stable release with the `channel` command");
             }
             if (!connected) {
-                DEFAULT_LOG.info("Commands Help: https://github.com/rfresh2/ZenithProxy/wiki/Commands");
+                DEFAULT_LOG.info("Commands Help: https://github.com/Veslydev/ZenithCracked/wiki/Commands");
                 DEFAULT_LOG.info("Proxy IP: {}", CONFIG.server.getProxyAddress());
                 DEFAULT_LOG.info("Use the `connect` command to log in!");
             }

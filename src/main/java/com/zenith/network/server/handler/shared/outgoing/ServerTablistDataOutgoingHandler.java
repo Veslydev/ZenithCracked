@@ -23,7 +23,7 @@ public class ServerTablistDataOutgoingHandler implements PacketHandler<Clientbou
             var clientProfile = CACHE.getProfileCache().getProfile();
             var sessionProfileName = sessionProfile == null ? "Unknown" : sessionProfile.getName();
             var clientProfileName = clientProfile == null ? "Unknown" : clientProfile.getName();
-            return footer.append(Component.text().appendNewline().append(ComponentSerializer.minimessage("<aqua><bold>ZenithProxy")).build())
+            return footer.append(Component.text().appendNewline().append(ComponentSerializer.minimessage("<aqua><bold>ZenithCracked")).build())
                 .append(Component.text()
                             .appendNewline()
                             .append(ComponentSerializer.minimessage(
