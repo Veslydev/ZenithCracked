@@ -81,29 +81,6 @@ def setup_execute(config):
             print("Invalid username. Minecraft usernames must be 3-16 characters long and can only contain letters, numbers, and underscores.")
     print("")
 
-    print("Select the server IP address ZenithProxy will connect to.")
-    print("If you are unsure, just press enter to use 'mc.voidcreations.net' by default. (This can be changed later)")
-    address = input("> ")
-    if address == "":
-        address = "mc.voidcreations.net"
-    print("")
-
-    while True:
-        print("Select the server port ZenithProxy will connect to.")
-        print("If you are unsure, just press enter to use 25565 by default. (This can be changed later)")
-        portserver = input("> ")
-        if portserver == "":
-            portserver = 25565
-            break
-        try:
-            portserver = int(portserver)
-            if portserver < 1 or portserver > 65535:
-                raise ValueError
-            break
-        except ValueError:
-            print("Invalid port number. Must be between 1 and 65535.")
-    print("")
-
 
     while True:
         print("Select the port ZenithProxy will be hosted on.")
@@ -227,18 +204,9 @@ def setup_execute(config):
     # Write config.json
     config = {}
 
-    # if auth_method == "msa":
-    #     config["authentication"] = {"accountType": "msa", "email": username, "password": password}
-
     config["authentication"] = {
         "username": username
     }
-
-    config["server"] = {
-        "address": address,
-        "port": portserver
-    }
-
 
     ip_pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     proxy_address = ip + ":" + str(port) if ip_pattern.match(ip) else ip
