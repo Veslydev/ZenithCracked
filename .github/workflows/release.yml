@@ -83,15 +83,17 @@ jobs:
 
       - name: Get Release Tags
         run: |
-          j_tag="$(sed 's/\+/\+java./' <<< ${{ github.ref_name }})" 
+          j_tag="$(sed 's/\\+/\\+java./' <<< ${{ github.ref_name }})" 
           echo "JAVA_TAG=$j_tag" >> "$GITHUB_ENV"
-          l_tag="$(sed 's/\+/\+linux./' <<< ${{ github.ref_name }})"
+          l_tag="$(sed 's/\\+/\\+linux./' <<< ${{ github.ref_name }})"
           echo "LINUX_TAG=$l_tag" >> "$GITHUB_ENV"
 
-      - name: Debug Release Tags
+      - name: Delete Existing Tags
         run: |
-          echo "JAVA_TAG=${{ env.JAVA_TAG }}"
-          echo "LINUX_TAG=${{ env.LINUX_TAG }}"
+          git tag -d ${{ env.JAVA_TAG }} || true
+          git tag -d ${{ env.LINUX_TAG }} || true
+          git push origin :${{ env.JAVA_TAG }} || true
+          git push origin :${{ env.LINUX_TAG }} || true
 
       - name: Publish Java Artifact
         uses: ncipollo/release-action@v1
@@ -99,7 +101,7 @@ jobs:
           tag: ${{ env.JAVA_TAG }}
           artifacts: "artifacts/*.jar"
           prerelease: true
-          body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"
+          body: "File upload not for users. **Use the Launcher:** https://github.com/rfresh2/ZenithProxy/releases/tag/launcher-v3"
 
       - name: Publish Linux Artifact
         uses: ncipollo/release-action@v1
@@ -107,4 +109,4 @@ jobs:
           tag: ${{ env.LINUX_TAG }}
           artifacts: "artifacts/ZenithProxy.zip"
           prerelease: true
-          body: "File upload not for users. **Use the Launcher:** https://github.com/Veslydev/ZenithCracked/releases/tag/launcher-v3"
+          body: "File upload not for users. **Use the Launcher:** https://github.com/rfresh2/ZenithProxy/releases/tag/launcher-v3"
