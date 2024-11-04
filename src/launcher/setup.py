@@ -69,6 +69,20 @@ def setup_execute(config):
         print("")
 
     while True:
+        print("Select the username ZenithCrack will be on.")
+        print("If you are unsure, just press enter to use 'ZenithCrack' by default. (This can be changed later)")
+        username = input("> ")
+        if username == "":
+            username = "ZenithCrack"
+            break
+        elif re.match("^[a-zA-Z0-9_]{1,40}$", username):
+            break
+        else:
+            print("Invalid username. Minecraft usernames must be 3-16 characters long and can only contain letters, numbers, and underscores.")
+    print("")
+
+
+    while True:
         print("Select the port ZenithProxy will be hosted on.")
         print("If you are unsure, just press enter to use 25565 by default.")
         port = input("> ")
@@ -192,6 +206,10 @@ def setup_execute(config):
 
     # if auth_method == "msa":
     #     config["authentication"] = {"accountType": "msa", "email": username, "password": password}
+
+    config["authentication"] = {
+        "username": username
+    }
 
     ip_pattern = re.compile(r"^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")
     proxy_address = ip + ":" + str(port) if ip_pattern.match(ip) else ip
