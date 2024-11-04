@@ -20,7 +20,7 @@ public class RestAutoUpdater extends AutoUpdater {
 
     public RestAutoUpdater() {
         this.baseUrl = LAUNCH_CONFIG.repo_owner.equals("Veslydev") && LAUNCH_CONFIG.repo_name.equals("ZenithCracked")
-            ? "https://github.2b2t.vc"
+            ? "https://api.github.com"
             : "https://api.github.com";
         this.httpClient = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.ALWAYS)

@@ -160,7 +160,7 @@ def valid_release_channel(channel):
 
 def get_github_api_base_url():
     if repo_owner == "Veslydev" and repo_name == "ZenithCracked":
-        return "github.2b2t.vc"
+        return "api.github.com"
     else:
         return "api.github.com"
 

@@ -9,7 +9,7 @@ class GitHubAPI:
 
     def get_base_url(self):
         if self.launch_config.repo_owner == "Veslydev" and self.launch_config.repo_name == "ZenithCracked":
-            host = "github.2b2t.vc"
+            host = "api.github.com"
         else:
             host = "api.github.com"
         return f"https://{host}/repos/{self.launch_config.repo_owner}/{self.launch_config.repo_name}/releases"
