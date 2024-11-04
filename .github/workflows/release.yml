@@ -93,10 +93,11 @@ jobs:
 
       - name: Delete Existing Tags
         run: |
+          git fetch --tags
           git tag -d ${{ env.JAVA_TAG }} || true
           git tag -d ${{ env.LINUX_TAG }} || true
-          git push origin :${{ env.JAVA_TAG }} || true
-          git push origin :${{ env.LINUX_TAG }} || true
+          git push origin :refs/tags/${{ env.JAVA_TAG }} || true
+          git push origin :refs/tags/${{ env.LINUX_TAG }} || true
 
       - name: Publish Java Artifact
         uses: ncipollo/release-action@v1
