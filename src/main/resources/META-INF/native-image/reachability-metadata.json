@@ -1917,16 +1917,6 @@
       ]
     },
     {
-      "type": "com.zenith.util.Config$Client$ChatSigning",
-      "allDeclaredFields": true,
-      "methods": [
-        {
-          "name": "<init>",
-          "parameterTypes": []
-        }
-      ]
-    },
-    {
       "type": "com.zenith.util.Config$Client$ClientTimeout",
       "allDeclaredFields": true,
       "methods": [

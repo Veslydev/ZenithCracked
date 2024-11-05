@@ -156,7 +156,7 @@ public class Proxy {
                     DISCORD.start();
                 } catch (final Throwable e) {
                     err = true;
-                    DISCORD_LOG.debug("Failed starting discord bot", e);
+                    DISCORD_LOG.error("Failed starting discord bot: {}", e.getMessage());
                 }
                 if (!err) DISCORD_LOG.info("Started Discord Bot");
             }
@@ -486,7 +486,6 @@ public class Proxy {
         if (minecraftProtocol == null) throw new RuntimeException("Auth failed");
         var username = minecraftProtocol.getProfile().getName();
         var uuid = minecraftProtocol.getProfile().getId();
-        CACHE.getChatCache().setPlayerCertificates(minecraftProtocol.getProfile().getPlayerCertificates());
         AUTH_LOG.info("Logged in as {} [{}].", username, uuid);
         if (CONFIG.server.extra.whitelist.autoAddClient)
             if (PLAYER_LISTS.getWhitelist().add(username, uuid))

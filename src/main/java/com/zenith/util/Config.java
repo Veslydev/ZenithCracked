@@ -44,7 +44,6 @@ public final class Config {
         public enum AccountType {
             @SerializedName("msa") MSA,
             @SerializedName("device_code") DEVICE_CODE,
-            @SerializedName("device_code_chat_signing") DEVICE_CODE_CHAT_SIGNING,
             @SerializedName("device_code_without_device_token") DEVICE_CODE_WITHOUT_DEVICE_TOKEN,
             @SerializedName("prism") PRISM
         }
@@ -74,7 +73,7 @@ public final class Config {
             public boolean enabled = false;
             public boolean disableOn2b2t = true;
             public boolean autoProtocolVersion = true;
-            public int protocolVersion = 765;
+            public int protocolVersion = 762; // 1.19.4
         }
 
         public static final class ClientTimeout {
@@ -407,10 +406,6 @@ public final class Config {
         public boolean enabled = true;
         public final Extra extra = new Extra();
         public final Ping ping = new Ping();
-        public final ChatSigning chatSigning = new ChatSigning();
-        public static final class ChatSigning {
-            public boolean enabled = true;
-        }
         public final ServerViaVersion viaversion = new ServerViaVersion();
         public boolean verifyUsers = false;
         public boolean acceptTransfers = true;
