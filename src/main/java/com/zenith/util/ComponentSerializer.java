@@ -9,7 +9,6 @@ import net.kyori.adventure.text.TranslatableComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.flattener.ComponentFlattener;
 import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import net.kyori.adventure.text.serializer.ansi.ANSIComponentSerializer;
 import net.kyori.adventure.translation.GlobalTranslator;
 import net.kyori.adventure.translation.TranslationRegistry;
@@ -76,10 +75,6 @@ public final class ComponentSerializer {
 
     public static Component minimessage(String message) {
         return MiniMessage.miniMessage().deserialize(message);
-    }
-
-    public static Component minimessage(String message, TagResolver... resolvers) {
-        return MiniMessage.miniMessage().deserialize(message, resolvers);
     }
 
     public static Component deserializeEmbed(final Embed embed) {
