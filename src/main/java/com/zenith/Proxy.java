@@ -157,7 +157,6 @@ public class Proxy {
                 } catch (final Throwable e) {
                     err = true;
                     DISCORD_LOG.error("Failed starting discord bot: {}", e.getMessage());
-                    DISCORD_LOG.debug("Failed starting discord bot", e);
                 }
                 if (!err) DISCORD_LOG.info("Started Discord Bot");
             }
@@ -487,7 +486,6 @@ public class Proxy {
         if (minecraftProtocol == null) throw new RuntimeException("Auth failed");
         var username = minecraftProtocol.getProfile().getName();
         var uuid = minecraftProtocol.getProfile().getId();
-        // Removed due to missing method getPlayerCertificates()
         AUTH_LOG.info("Logged in as {} [{}].", username, uuid);
         if (CONFIG.server.extra.whitelist.autoAddClient)
             if (PLAYER_LISTS.getWhitelist().add(username, uuid))
@@ -627,7 +625,7 @@ public class Proxy {
                         **Official Discord**:
                           https://discord.gg/nJZrSaRKtb
                         **Github**:
-                          https://github.com/Veslydev/ZenithCracked
+                          https://github.com/rfresh2/ZenithProxy
                         """.formatted(LAUNCH_CONFIG.version));
                 }
             } catch (final Throwable e) {
