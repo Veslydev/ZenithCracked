@@ -50,7 +50,7 @@ public class ChatSession {
             // last seen messages list (always empty)
             signature.update(Ints.toByteArray(0));
             var sign = signature.sign();
-            packet.setSignatureData(sign);
+            // removed the original signature
         } catch (Exception e) {
             throw new RuntimeException("Failed to sign message", e);
         }
@@ -84,7 +84,7 @@ public class ChatSession {
             signature.update(Ints.toByteArray(0));
             var sign = signature.sign();
             signatures.add(new ArgumentSignature("message", sign));
-            packet.setArgumentSignatures(signatures);
+            // removed the original signature
         } catch (Exception e) {
             throw new RuntimeException("Failed to sign command", e);
         }
