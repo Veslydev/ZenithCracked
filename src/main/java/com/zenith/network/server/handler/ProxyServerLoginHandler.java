@@ -112,7 +112,7 @@ public class ProxyServerLoginHandler implements ServerLoginHandler {
             Proxy.getInstance().getServerIcon()
         ));
         connection.send(new ClientboundServerLinksPacket(asList(
-            new ServerLink(ServerLinkType.WEBSITE, null, "https://github.com/rfresh2/ZenithProxy"),
+            new ServerLink(ServerLinkType.WEBSITE, null, "https://github.com/Veslydev/ZenithCracked"),
             new ServerLink(ServerLinkType.SUPPORT, null, "https://discord.gg/nJZrSaRKtb")
         )));
         connection.send(new ClientboundCustomReportDetailsPacket(Maps.of(
