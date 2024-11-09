@@ -19,6 +19,10 @@ public class UsernameCommand extends Command {
             "user",
             CommandCategory.MANAGE,
             "Change the username in the configuration.",
+            asList(
+                "<username>"
+            )
+        );
     }
 
     @Override
