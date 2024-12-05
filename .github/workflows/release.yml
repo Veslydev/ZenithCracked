@@ -1,3 +1,4 @@
+runs-on: self-hosted
 name: 1.21.0 Build and Release
 
 on:
